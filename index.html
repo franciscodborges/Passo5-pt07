@@ -1,0 +1,293 @@
+<!DOCTYPE html> <!-- Indica que este documento, este código vai ser escrito na linguagem html-->
+<html> <!--Define a raiz de um documento HTML-->
+  <head> <!--Esta secção Head serve para fazer declarações iniciais e permite definir o titulo da página-->
+    <meta charset = "utf-8"> <!--Para que os caracteres acentuados sejam apresentados corretamente, devemos colocar a seguinte instrução na área de head, sendo bastante util, porque em certos browser, por exemplo o Safari, os acentos não são bem lidos -->
+    <title> 
+    Pauta Caricaturada da Turma
+    </title> <!--Define o nome que aparece no separador do browser-->
+    <style> /* Esta tag é o que define o design do documento e significa que vamos escrver em CSS*/
+      .separador { /* Criação de uma classe dentro da tag "style" na qual defino um certo número de condições que se irão cumprir sempre que chamar esta classe*/ 
+        background-color: salmon;
+      }
+       img { /* Caracterização desta tag,imagem, para que sempre que a utilizarmos seguir as condições abaixo*/
+        text-align: center; /* Serve para alinhar a imagem, neste caso no centro da celúla*/
+      }
+      table { /* Caracterização desta tag*/
+          font-family: sans-serif; /* Permite escolher a fonte da letra*/
+          border-collapse: collapse; /* Permite não haver espaçamento entre as celulas*/
+          width: 100%; /* Faz com que a página web fique toda ocupada, neste caso faz com que a tabela apareça do tamanho possível de forma a caber no ecrã sem ser preciso fazer scroll para os lados*/
+      }
+      td, th { /* Caracterização desta tag*/
+          border: 1px solid #dddddd; /* Define a espessura e a cor das bordas a volta das celulas td e th*/
+          text-align: center;
+          padding: 10px; /* Define o tamanho do preenchimento*/
+          
+            }
+      tr:nth-child(even) 
+      { background-color: #cccccc; /* O "nth-child" faz com que certas "tr" (linhas da tabela) obdeção as condições definidas (background-color). Neste caso como coloquei "(even)" ele apenas segue as condições nas linhas pares*/
+      }
+    </style> <!-- Fecha a tag style-->
+  </head> <!-- Fecha a tag head-->
+  <body> <!-- Esta secção body é onde escrevemos tudo o que pretendemos que surja na página -->
+    <h2> Trabalho PT07 - <b> HTML </b> </h2> <!-- Coloca um texto com o tamanho de letra h2 a dizer: "Trabalho PT07 - HTML", no qual "HTML" está a bold, devido a tag "b"-->
+    <table> <!-- Abre a tag tabela-->
+      <caption style = "font-size: 20px; color: red;"> <!-- Esta propriedade, caption, permite dar um títlo a tabela, com a especificação do tamanho da letra e da cor que eu escolhi-->
+        <b> Planta de sala de AIB </b> <!-- A tag "b" coloca o texto a bold-->
+      </caption> <!-- Fecha a tag caption-->
+      <tr style = "height:60px"> <!-- Abre a primeira linha da tabela com altura de 60px-->
+          
+        <th colspan = "7"> CORREDOR </th> <!-- Cria a primeira celula que ocupa 7 celulas dessa linha através do "colspan", que significa espaço de coluna-->
+        <th colspan = "2"> <div class="separador"> <b> Professor </b> </div> </th> <!-- Cria uma celula que ocupa 2 celulas dessa linha na qual aparece escrito "Professor" em bold ("b"). Com as especificações da classe chamada ("separador") e definida acima-->
+        <th> </th> <!-- Cria uma celula em branco, sem nada escrito-->
+      </tr> <!-- Fecha a primeira linha da tabela-->
+      <tr> <!-- Abre uma próxima linha da tabela-->
+        
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Nyckollas Brandão
+          <p> 
+            <a href = "imagens/900.1200/nyckollasbrandao9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/nyckollasbrandao75100.jpg"; alt="Nyckollas Brandão imagem"> <!-- Coloca a imagem definida na fonte ( src = "w3schools.jpg") com a altura (height) e largura (width) definido/a. O "alt" serve para no caso de a imagem não carregar, deixar o texto entre aspas ("W3Schools.com")
+    NOTA: A tag "img" é uma das tags que não se necessita de fechar e note ainda que a "src" no caso de estar noutra pasta, sem ser na que se encontra este projeto, terá de colocar o nome da pasta antes do nome da imagem e dividi-lo com uma "/". Por último, a seguir a escrever o nome da imagem tem que colocar "." e tipo de ficheiro em que a imagem se encontra guardada //-->
+            </a>
+          </p>
+            
+          <p style = "font-size: x-small; color: aquamarine"> Nº20 12º6ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda-->
+        </td> <!-- Fecha a celula-->
+        
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          André Jesus           
+          <p> 
+            <a href = "imagens/900.1200/andrejesus9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/andrejesus75100.jpg"; alt="André Jesus imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: bisque"> Nº4 12º6ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+          
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          João Azevedo
+          <p> 
+            <a href = "imagens/900.1200/joaoazevedo9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/joaoazevedo75100.jpg"; alt="João Azevedo imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: rgba(0, 0, 255, 0.3)"> Nº14 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Daniel Dias
+          <p> 
+            <a href = "imagens/900.1200/danieldias9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/danieldias75100.jpg"; alt="Daniel Dias imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: coral"> Nº4 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td style="background-color: white; width: 15%" colspan="2" rowspan = "5"> <b> CORREDOR </b> </td> <!-- Nestas duas linhas abro uma celula com uma extensão de 4 linhas para baixo e 1 colunas para o lado direito, ficando uma celula de 2/5 , de forma a representar o corredor que existe na sala. O "width:15%" apenas faz com que o corredor fica apresentado em 15% do ecrã, sendo que a pedida que vamos diminuindo o browser a largura da coluna também diminui.-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Miriam
+          <p> 
+            <a href = "imagens/900.1200/miriam9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/miriam75100.jpg"; alt="Miriam imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: darkred"> Nº19 12º6ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Leonardo
+          <p> 
+            <a href = "imagens/900.1200/leonardo9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/leonardo75100.jpg"; alt="Leonardo imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: #f3f2f2"> Nº17 12º6ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Paulo Pinto
+          <p> 
+            <a href = "imagens/900.1200/paulopinto9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/paulopinto75100.jpg"; alt="Paulo Pinto imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: darkorange"> Nº20 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          <b> EU: </b>
+          <p>Francisco Borges</p>
+          <p> 
+            <a href = "imagens/900.1200/minhacaricatura9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/minhacaricatura75100.jpg"; alt="EU: Francisco Borges imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: goldenrod"> Nº13 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+      </tr> 
+      <tr> <!-- Abre uma próxima linha da tabela-->
+        <td style = "height: 30px"; colspan="4"> </td> <!-- Esta celula serve para criar o corredor existente entre as filas de secretaria, corredor o qual é perpendicular ao corredor principal. O "colspan" serve para aumentar o tamanho da celula para o numero que eu definir. O aumento é sempre do tamanho predefinido de uma celula.-->
+      </tr> <!-- Fecha a celula-->
+      <tr> <!-- Abre uma próxima linha da tabela-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Ricardo Fialho
+          <p> 
+            <a href = "imagens/900.1200/ricardofialho9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/ricardofialho75100.jpg"; alt="Ricardo Fialho imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: indigo"> Nº23 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Diogo Santos
+          <p> 
+            <a href = "imagens/900.1200/diogosantos9001200.jpeg" target="_blank">
+              <img src = "imagens/75.100/diogosantos75100.jpeg"; alt="Diogo Santos imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: lightseagreen"> Nº5 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Sebastião Antunes
+          <p> 
+            <a href = "imagens/900.1200/sebastiaoantunes9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/sebastiaoantunes75100.jpg"; alt="Sebastião Antunes imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: royalblue"> Nº24 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Guilherme Valiente
+          <p> 
+            <a href = "imagens/900.1200/guilhermevaliente9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/guilhermevaliente75100.jpg"; alt="Guilherme Valiente imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: springgreen"> Nº8 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Francisco Almeida
+          <p> 
+            <a href = "imagens/900.1200/franciscoalmeida9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/franciscoalmeida75100.jpg"; alt="Francisco Almeida imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: yellowgreen"> Nº6 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Guilherme Cabo
+          <p> 
+            <a href = "imagens/900.1200/guilhermecabo9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/guilhermecabo75100.jpg"; alt="Guilherme Cabo imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: teal"> Nº7 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Henrique Silva
+          <p> 
+            <a href = "imagens/900.1200/henriquesilva9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/henriquesilva75100.jpg"; alt="Henrique Silva imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: saddlebrown"> Nº9 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Xavier Alves
+          <p> 
+            <a href = "imagens/900.1200/xavieralves9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/xavieralves75100.jpg"; alt="Xavier Alves imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: #556b2f"> Nº25 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+      </tr>
+      <tr> <!-- Abre uma próxima linha da tabela-->
+        <td style = "height: 30px"; colspan = "4"> </td> <!-- Esta celula serve para criar o corredor existente entre as filas de secretaria, corredor o qual é perpendicular ao corredor principal. O "colspan" serve para aumentar o tamanho da celula para o numero que eu definir. O aumento é sempre do tamanho predefinido de uma celula.-->
+      </tr>
+      <tr> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+        <td> 
+          João Leal
+          <p> 
+            <a href = "imagens/900.1200/joaoleal9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/joaoleal75100.jpg"; alt="João Leal imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: rgb(0, 191, 255)"> Nº15 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Miguel Correia
+          <p> 
+            <a href = "imagens/900.1200/miguelcorreia9001200.jpeg" target="_blank">
+              <img src = "imagens/75.100/miguelcorreia75100.jpeg"; alt="Miguel Correia imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: hsl(187, 55%, 30%)"> Nº18 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Pedro Peres
+          <p> 
+            <a href = "imagens/900.1200/pedroperes9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/pedroperes75100.jpg"; alt="Pedro Peres imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small;color: hsla(120, 20%, 20%, 0.5)"> Nº21 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          João Silva
+          <p> 
+            <a href = "imagens/900.1200/joaosilva9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/joaosilva75100.jpg"; alt="João Silva imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: black"> Nº16 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          António Amaral
+          <p> 
+            <a href = "imagens/900.1200/antonioamaral9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/antonioamaral75100.jpg"; alt="António Amaral imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: darkcyan"> Nº2 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td> <!-- Abre uma celula na qual escreve o nome do aluno. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Camily Lopes
+          <p> 
+            <a href = "imagens/900.1200/camilylopes9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/camilylopes75100.jpg"; alt="Camily Lopes imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: chocolate"> Nº3 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a celula-->
+        <td colspan = "2"> <!-- Abre uma celula com o tamanho de duas celulas, aumenta a celula na horizontal. De seguida faz um parágrafo no qual insere uma imagem caricaturada do aluno na resolução de 75 por 100 pixeis e por ultimo associa um link a essa imagem que faz ligação à outra fotografia igual mas com com uma resolução de 900 por 1200 pixeis.-->
+          Nuno Pires
+          <p> 
+            <a href = "imagens/900.1200/nunopires9001200.jpg" target="_blank">
+              <img src = "imagens/75.100/nunopires75100.jpg"; alt="Nuno Pires imagem">
+            </a>
+              
+          </p>
+          <p style = "font-size: x-small; color: #349202"> Nº19 12º2ª </p> <!--Aqui adiciono um paragrafo por baixo da imagem, que serve como legenda pois está definido com o tamanho de letra para x-small. Ainda adiciono uma cor a legenda, atraves da propriedade "style"-->
+        </td> <!-- Fecha a ultima celula da tabela-->
+      </tr> <!-- Fecha a ultima linha da tabela-->
+    </table> <!-- Fecha a tag tabela-->
+  </body> <!-- Fecha a tag "body"-->
+</html> <!-- Fecha a tag "html"-->
